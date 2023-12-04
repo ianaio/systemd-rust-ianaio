@@ -1,0 +1,14 @@
+[Unit]
+Description=Rust Rocket Web Application Example from steadylearner
+[Service]
+User=root
+Group=root
+WorkingDirectory=/root/systemd-rust-ianaio
+Environment="ROCKET_ENV=prod"
+Environment="ROCKET_ADDRESS=0.0.0.0"
+Environment="ROCKET_PORT=4262"
+Environment="ROCKET_LOG=critical"
+ExecStart=/root/systemd-rust-ianaio/target/release/systemd-rust-ianaio
+[Install]
+WantedBy=multi-user.target
+

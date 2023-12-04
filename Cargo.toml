@@ -1,0 +1,24 @@
+[package]
+name = "systemd-rust-ianaio"
+version = "0.1.0"
+authors = ["Jaroslaw Cichon <dev@iana.io>"]
+edition = "2021"
+homepage = "https://github.com/ianaio/systemd-rust-ianaio#readme"
+keywords = ["ianaio","systems", "systemd", "rust", "debian"]
+repository = "https://github.com/ianaio/systemd-rust-ianaio"
+readme = "README.md"
+
+[package.metadata.deb]
+depends = "$auto, systemd"
+extended-description = "System for systemd rust from debian"
+section = "admin"
+priority = "optional"
+assets = [
+    ["target/release/systemd-rust-ianaio", "usr/bin/rust", "755"],
+    ["debian/rust.service", "/lib/systemd/system/rust.service", "644"],
+]
+maintainer-scripts = "debian/scripts"
+
+[dependencies]
+cargo-deb = "1.43.0"
+rocket = "0.4.10"

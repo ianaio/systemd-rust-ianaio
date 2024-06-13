@@ -10,7 +10,9 @@ Requires Rust 1.31+, and optionally `dpkg`, `ldd` and `liblzma-dev`. Compatible 
 Once you clone the repo do:
 
 ```sh
-cargo build && cargo deb
+cargo build
+cargo install cargo-deb
+cargo deb
 sudo dpkg -i target/debian/rust_0.1.0_amd64.deb
 cargo build --release //for systemd ExecStart path in production!
 ```

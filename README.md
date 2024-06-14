@@ -13,7 +13,7 @@ Once you clone the repo do:
 cargo build
 cargo install cargo-deb
 cargo deb
-sudo dpkg -i target/debian/rust_0.1.0_amd64.deb
+sudo dpkg -i /root/systemd-rust-ianaio/target/debian/systemd-rust-ianaio_0.1.0-1_amd64.deb
 cargo build --release //for systemd ExecStart path in production!
 ```
 

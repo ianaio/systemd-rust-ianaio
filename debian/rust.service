@@ -1,5 +1,5 @@
 [Unit]
-Description=Rust Rocket Web Application Example from steadylearner
+Description=IanaIO Rust Rocket Web Application
 [Service]
 User=root
 Group=root
